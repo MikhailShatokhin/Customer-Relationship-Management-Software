@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PetElevator.CRM;
 
 namespace PetElevator.CRM
 {
     public class Pet
     {
         //Constructors
-        public Pet (string petName, string species)
+        public Pet(string petName, string species)
         {
             PetName = petName;
             Species = species;
@@ -21,9 +22,8 @@ namespace PetElevator.CRM
         //Methods
         public string ListVaccinations()
         {
-
             string petVacs = string.Join(", ", Vaccinations.ToArray());
-            
+
             return petVacs;
         }
 

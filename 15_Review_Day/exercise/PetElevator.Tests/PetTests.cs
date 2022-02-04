@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using PetElevator.CRM;
 
+
 namespace PetElevator.Tests
 {
     [TestClass]
@@ -10,20 +11,19 @@ namespace PetElevator.Tests
         [TestMethod]
         public void ListVaccinationsTest()
         {
+            Pet testingPet = new Pet("Gabriel", "GSD");
+
             //Arrange
-            List<string> testObject = new List<string>
-            {
-                "Rabies, Distemper, Parvo"
-            };
+            testingPet.Vaccinations.Add("Rabies");
+            testingPet.Vaccinations.Add("Distemper");
+            testingPet.Vaccinations.Add("Parvo");
 
             //Act
-            List<string> result = new List<string>
-            {
-                "Rabies","Distemper","Parvo"
-            };
+            string result = testingPet.ListVaccinations();
 
             //Assert
             Assert.AreEqual(testObject, result);
+            Assert.AreEqual("Rabies, Distemper, Parvo", result);
 
 
 
