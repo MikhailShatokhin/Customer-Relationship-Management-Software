@@ -36,5 +36,23 @@ namespace PetElevator.HR
             }
         }
 
+        public override double GetBalanceDue(Dictionary<string, double> servicesRendered)
+        {
+            double balanceDue = 0;
+            foreach (KeyValuePair<string, double> item in servicesRendered)
+            {
+                if (item.Key == "Walking")
+                {
+                    balanceDue += item.Value / 2;
+                }
+                else
+                {
+                    balanceDue += item.Value;
+                }
+
+            }
+            return balanceDue;
+
+        }
     }
 }

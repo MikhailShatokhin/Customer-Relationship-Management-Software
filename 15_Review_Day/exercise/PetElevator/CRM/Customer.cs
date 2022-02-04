@@ -25,5 +25,15 @@ namespace PetElevator.CRM
         public string PhoneNumber { get; set; }
         public List<Pet> Pets { get; set; } = new List<Pet>();
 
+        public override double GetBalanceDue(Dictionary<string, double> servicesRendered)
+        {
+            double balanceDue = 0;
+            foreach (KeyValuePair<string, double> item in servicesRendered)
+            {
+                balanceDue += item.Value;
+            }
+            return balanceDue;
+
+        }
     }
 }

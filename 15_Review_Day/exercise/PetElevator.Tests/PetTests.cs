@@ -22,7 +22,7 @@ namespace PetElevator.Tests
             string result = testingPet.ListVaccinations();
 
             //Assert
-            Assert.AreEqual(testObject, result);
+            
             Assert.AreEqual("Rabies, Distemper, Parvo", result);
 
 
