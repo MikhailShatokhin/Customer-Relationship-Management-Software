@@ -11,13 +11,19 @@ namespace PetElevator.Tests
         public void ListVaccinationsTest()
         {
             //Arrange
-            List<string> testObject = new List<string> Vaccinations();
+            List<string> testObject = new List<string>
+            {
+                "Rabies, Distemper, Parvo"
+            };
 
             //Act
-            string result = testObject.ListVaccinations("Rabies", "Distemper", "Parvo");
+            List<string> result = new List<string>
+            {
+                "Rabies","Distemper","Parvo"
+            };
 
             //Assert
-
+            Assert.AreEqual(testObject, result);
 
 
 

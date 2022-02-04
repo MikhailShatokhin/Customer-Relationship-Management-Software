@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PetElevator.CRM
 {
-    class Pet
+    public class Pet
     {
         //Constructors
         public Pet (string petName, string species)
