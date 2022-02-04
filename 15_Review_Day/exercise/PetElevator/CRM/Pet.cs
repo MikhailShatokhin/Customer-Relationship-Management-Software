@@ -16,12 +16,13 @@ namespace PetElevator.CRM
         //Properties
         public string PetName { get; set; }
         public string Species { get; set; }
-        public List<Pet> Vaccinations { get; set; } = new List<Pet>();
+        public List<string> Vaccinations { get; set; } = new List<string>();
 
         //Methods
         public string ListVaccinations()
         {
-            string petVacs = string.Join(",", Vaccinations);
+
+            string petVacs = string.Join(", ", Vaccinations.ToArray());
             
             return petVacs;
         }
